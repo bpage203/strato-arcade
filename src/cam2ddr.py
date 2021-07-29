@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
 
-data = np.array(pd.read_excel('C:/Users/missa/Desktop/BIRST/t1-stratoarcade/src/pixycam_file.xlsx'))
+data = np.array(pd.read_excel('src/pixycam_file.xlsx'))
 ball = data[:,1]
 x = data[:,2]
 y = data[:,3]
-new_file = open('C:/Users/missa/Desktop/BIRST/t1-stratoarcade/src/ddr_file.txt','w')
+new_file = open('src/ddr_file.txt','w')
 new_file.write(str(int(ball[0])) + str(int(ball[1])))
 lis = np.linspace(0,len(data)-2,int((len(data))/2))
 lis = [int(lis) for lis in lis]
@@ -32,4 +32,4 @@ for i in lis:
         new_file.write(str(ddr1) + str(ddr2))
     last1 = ddr1 
     last2 = ddr2
-new_file = open('C:/Users/missa/Desktop/BIRST/t1-stratoarcade/src/ddr_file.txt')
+new_file = open('src/ddr_file.txt')
